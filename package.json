@@ -1,0 +1,22 @@
+{
+  "name": "jsClassApi",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hankyates/jsClassApi.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hankyates/jsClassApi/issues"
+  },
+  "homepage": "https://github.com/hankyates/jsClassApi",
+  "dependencies": {
+    "express": "~4.0.0"
+  }
+}
