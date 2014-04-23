@@ -12,19 +12,4 @@ app.get('/content', function(req, res){
   res.json(content);
 });
 
-app.get('/content/home', function(req, res){
-  res.header("Access-Control-Allow-Origin", "*");
-  res.json(content['home']);
-});
-
-app.get('/content/articles', function(req, res){
-  res.header("Access-Control-Allow-Origin", "*");
-  res.json(content['articles']);
-});
-
-app.get('/content/portfolio', function(req, res){
-  res.header("Access-Control-Allow-Origin", "*");
-  res.json(content['portfolio']);
-});
-
 app.listen(3000);
