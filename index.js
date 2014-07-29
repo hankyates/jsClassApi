@@ -19,13 +19,24 @@ var content = [
   {name: 'portfolio', content: 'Tofu kitsch wolf DIY, seitan blog chambray gentrify wayfarers Carles PBR iPhone try-hard. Fixie squid fashion axe, street art skateboard pug vegan wayfarers banjo irony cardigan drinking vinegar. Truffaut High Life fixie organic deep v. Tousled Schlitz butcher slow-carb. Lo-fi Austin +1 8-bit, polaroid ugh tote bag flannel ethnic tousled yr bespoke Marfa Banksy. Fixie Banksy asymmetrical locavore hashtag ennui cornhole disrupt. Helvetica organic quinoa kitsch roof party stumptown.'},
   {name: 'more', content: '90s Pinterest XOXO occupy Neutra, pop-up PBR flexitarian raw denim viral ennui High Life letterpress. Echo Park selfies next level tattooed pop-up mumblecore. Fap synth flannel slow-carb mustache, wolf viral. Dreamcatcher twee ethnic, occupy drinking vinegar Neutra master cleanse literally. Scenester cornhole lomo Truffaut. McSweeneys Shoreditch flexitarian Marfa ugh selvage. Sriracha kale chips wolf umami gastropub.'}
 ];
+var temp = [];
 
-var randomnumber=Math.floor(Math.random()*16);
-content.length = randomnumber;
+
+var randomnumber;
 
 app.get('/content', function(req, res){
+  randomnumber = Math.floor(Math.random()*16);
+
+  var theCopy = []; // An new empty array
+  for (var i = 0, len = content.length; i < len; i++) {
+      theCopy[i] = content[i];
+  }
+  
+  theCopy.length = randomnumber;
+  console.log('=-===> random number is: ', theCopy.length);
+
   res.header("Access-Control-Allow-Origin", "*");
-  res.json(content);
+  res.json(theCopy);
 });
 
 app.listen(3000);
