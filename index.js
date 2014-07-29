@@ -10,7 +10,7 @@ var content = [
 
 app.get('/content', function(req, res){
   res.header("Access-Control-Allow-Origin", "*");
-  res.json(content);
+  res.json(content.slice(0, ~~((Math.random() * 10) / 2.5) + 1);
 });
 
 app.listen(3000);
